@@ -53,11 +53,12 @@
 							Here you can view some of my independent project work and accomplishments as a graduate student. More
 							content will be added in the future!
 						</p>
+						<ul class="actions">
+							<li><a href="#contact" class="button primary">Contact and Socials</a></li>
+						</ul>
 					</div>
 				</div>
-				<ul class="actions">
-					<li><a href="#contact" class="button primary">Contact and Socials</a></li>
-				</ul>
+				
 			</div>
 		</section>
 
@@ -79,6 +80,7 @@
 						</p>
 					</div>
 					<div class="inner">
+						<h2>Repulsor</h2>
 						<div class="content-banner">
 							<div class="content-banner-image">
 								<img src="images/repulsor-thumbnail.webp" />
@@ -96,12 +98,11 @@
 								</p>
 							</div>
 							<div class="content-banner-text">
-								<h2>Repulsor</h2>
 								<p>
 									For my first publicly released game, <strong>Repulsor</strong>, I challenged myself to build a
 									larger game in a short, focused time period by making use of strong up-front planning and time
 									management. <br />
-									Repulsor is a level-based action game rapidly developed in 10 days.
+									Repulsor is a level-based action game rapidly developed in twelve days.
 								</p>
 								<h3>High-Speed, Iterative Physics Action</h3>
 								<p>
@@ -113,11 +114,11 @@
 									one hit. <br /><br />
 
 									While Repulsor is very action-y, the extremely fast pace actually makes many gameplay scenarios too
-									quick to properly react to. This interestingly has the effect of requiring the player to plan out
+									quick to reliably react to. This interestingly has the effect of requiring the player to plan out
 									their route to beating a level ahead of time- eventually building up a strategy which can fully tackle
 									the level (However, there is a limited slow-motion slide ability to help line up tricky maneuvers).
 								</p>
-								<h3>Going Bigger</h3>
+								<h3>Persistent Data</h3>
 								<p>
 									This was my first project which made extensive use of persistent data. Levels needed to track high
 									scores and the number of points earned per level, as the cumulative point count is used for unlocking
@@ -139,6 +140,7 @@
 			<section>
 				<div class="content">
 					<div class="inner">
+						<h2>Godot Gridcannon</h2>
 						<div class="content-banner">
 							<div class="content-banner-image">
 								<img src="images/godot-gridcannon.PNG" />
@@ -149,7 +151,6 @@
 								</p>
 							</div>
 							<div class="content-banner-text">
-								<h2>Godot Gridcannon</h2>
 								<p>
 									In learning another engine, Godot (v3.5), I worked on recreating a unique card game designed by game
 									developer Tom Scott, <strong>Gridcannon</strong>. <br /><br />
@@ -174,10 +175,6 @@
 							<li><a href="https://github.com/ExplosiveEggshells/godot-gridcannon" target="_blank"
 									class="button primary"><i class="fab fa-github"></i> Check this out on GitHub</a></li>
 							<br />
-							<li><a
-									href="https://www.pentadact.com/2019-08-20-gridcannon-a-single-player-game-with-regular-playing-cards/"
-									target="_blank" class="button primary"> Tom Scott's <em>Gridcannon</em>
-									Design</a></li>
 						</ul>
 					</div>
 				</div>
@@ -207,7 +204,7 @@
 						</p>
 					</div>
 					<div class="content-banner-image">
-						<img src="images/gdo-logo.png" />
+						<img style="border-radius: 50%;" src="images/gdo-logo.png" />
 					</div>
 				</div>
 				<h2>Game Developer's Library</h2>
@@ -247,7 +244,7 @@
 							produce combine artistic design and mathematics into awesome effects!<br /><br />
 
 							The projects labeled "RD" are implemented via a recreation of Dr. Duffin's <em>RD_View</em> rendering
-							engine, which itself is heavily based off of Pixar's RenderMan specification. The recreation is created in C++ as
+							engine, which itself is heavily based off of Pixar's RenderMan specification. The recreation is written in C++ as
 							part of the rendering course via Dr. Duffin's guidance. You can read more about the RD_View render engine
 							at the link below.
 						</p>
@@ -257,6 +254,7 @@
 						</ul>
 					</div>
 					<div class="inner">
+						<h2>Marching Cubes [RD]</h2>
 						<div class="content-banner">
 							<div class="content-banner-image">
 								<img src="images/rd-marching-cubes-3.PNG" />
@@ -273,11 +271,10 @@
 								</p>
 							</div>
 							<div class="content-banner-text">
-								<h2>Marching Cubes [RD]</h2>
 								<p>
 									The Marching Cubes algorithm is a technique which generates an isosurface from a 3D field of scalar
 									values. The isosurface created is a surface which straddles between data points in the field which
-									transition across a particular threshold values.<br /><br />
+									transition across a particular threshold value.<br /><br />
 
 									Marching Cubes was originally developed for and saw much usage in the realm of medical imaging coupled
 									with CT and MRI scans. By obtaining a 3D scalar field of densities within a scanned patient, an
@@ -286,18 +283,16 @@
 									observe abnormalities.
 								</p>
 								<h3>RD_View Implementation</h3>
-								The algorithm itself involves evaluating each data point as a voxel which could potentially contain
-								triangles of the isosurface if it contains a step across threshold value. There are 256 possible
-								isosurface cases within any voxel depending on which edges possess a transition! My RD_View
+								The algorithm itself involves evaluating each data point as a voxel whose edges could potentially indicate a threshold-transition across two points in the data. There are 256 possible shapes within each voxel depending on which edges possess a transition! My RD_View
 								implementation only covers 180 of the 256 cases (which is why there are "holes" missing in parts of the
 								surface), but this is enough to demonstrate the algorithm.
 
 								</p>
 								<h4>Smoothing</h4>
 								<p>
-									In order to increase the smoothness of the created isosurface, trilinear interpolation can be used to
+									In order to increase the smoothness of the created isosurface, trilinear interpolation is used to
 									ensure that each voxel's transition points are moved to the exact point of threshold-intersection
-									within the data set, rather than at the middle of the voxel edge. This makes the resultant isosurface
+									within the data set (rather than at the middle of the voxel edge). This makes the resultant isosurface
 									look less 'cubic'.<br /><br />
 									Furthermore, the gradient at any given isosurface point was calculated via bilinear interpolation
 									across the surface, which can then be applied to the vertex normal to remove jagged edges and create a
@@ -314,6 +309,7 @@
 			<section>
 				<div class="content">
 					<div class="inner">
+						<h2>Bézier Curves [RD]</h2>
 						<div class="content-banner">
 							<div class="content-banner-image">
 								<img src="images/bezier-flag.gif" />
@@ -325,7 +321,6 @@
 								</p>
 							</div>
 							<div class="content-banner-text">
-								<h2>Bézier Curves [RD]</h2>
 								<p>
 									In graphics, it is often desirable to model curved surfaces which appear remarkably smooth without
 									having to explicitly place create thousands of vertices.<br /><br />
@@ -336,7 +331,7 @@
 
 									In RD_View, we implement Bézier curves as our curve solution, which allows curves to be rendered and
 									modulated via at least three control points. The De Casteljau algorithm is leveraged to perform
-									interpolation between the series of control points in order to find vertex positions on the 2D
+									interpolation between the series of control points in order to find vertex positions across the 2D
 									curve.<br /><br />
 
 									Further, a 3D <em>Bézier Patch</em> can be created by interpolating between two or more Bézier curves
@@ -365,14 +360,14 @@
 							behavior code, but are parameterized differently to create distinct effects.
 						<ul>
 							<li>
-								<strong>Dust cloud (White)</strong>: Particles expands in all directions uniformly, and have a high
+								<strong>Dust cloud (White)</strong>: Particles expand in all directions uniformly, and have a high
 								velocity dampening so they do not travel very far. Each particle is given a very slightly randomized
 								speed to add variance.
 							</li>
 							<li>
 								<strong>Light Debris (Light Brown)</strong>: These particles shoot out in the direction of the
-								cannonball's reflection vector upon impact with the ground. A gaussian distribution is added to said
-								reflection vector (and their speeds) to create some variance in their motion paths. They have strong
+								cannonball's reflection vector upon impact with the ground. A gaussian offset is added to said
+								reflection vector (and their speeds) per-particle to create some variance in their motion paths. They have strong
 								dampening (not as strong as the cloud), which causes them to suspend in air after the initial burst.
 							</li>
 							<li>
@@ -435,7 +430,6 @@
 	<footer id="footer" class="wrapper style1-alt">
 		<div class="inner">
 			<ul class="menu">
-				<li>&copy; Jake Rogers. All rights reserved.</li>
 				<li>
 					Design by:
 					<a href="http://html5up.net">HTML5 UP</a>
