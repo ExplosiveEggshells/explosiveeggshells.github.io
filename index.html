@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>Jake Rogers Portfolio</title>
+	<!-- Favicon by https://icons8.com/icon/Rko3OlMeiru0/program -->
+	<link rel="icon" type="image/x-icon" href="images/icons8-program-64.png">
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" />
+	</noscript>
+</head>
+
+<body class="is-preload">
+	<!-- Sidebar -->
+	<section id="sidebar">
+		<div class="inner">
+			<nav>
+				<ul>
+					<li><a href="#intro">Welcome</a></li>
+					<li><a href="#game-dev">Game Development</a></li>
+					<li><a href="#igdo">IGDO</a></li>
+					<li><a href="#computer-graphics">Computer Graphics</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+			</nav>
+		</div>
+	</section>
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+		<!-- Intro -->
+		<section id="intro" class="wrapper style1 fullscreen fade-up">
+			<div class="inner">
+				<div class="intro-flex-container intro-flex-content">
+					<img class="profile-image" width="250px" height="250px" src="images/MastersZoom.jpg" />
+					<div class="intro-flex-content">
+						<h1>Jake Rogers</h1>
+						<p>
+							Welcome to my portfolio site! I am a Chicago-based programmer
+							with a Master's degree in Computer Science. With my degree comes
+							an emphasis on software development and strong interest in game
+							development and computer graphics!
+						</p>
+						<p>
+							Here you can view some of my independent project work and accomplishments as a graduate student. More
+							content will be added in the future!
+						</p>
+					</div>
+				</div>
+				<ul class="actions">
+					<li><a href="#contact" class="button primary">Contact and Socials</a></li>
+				</ul>
+			</div>
+		</section>
+
+		<!-- Game Development -->
+		<section id="game-dev" class="wrapper style2 spotlights">
+			<section>
+				<div class="content">
+					<div class="inner">
+						<h1>Game Development</h1>
+						<p>
+							Game development is an amazing opportunity to combine so many
+							technical disciplines into a single artistic expression. For me,
+							there is no greater satisfaction than fully bringing the vision
+							of a game to life!
+						</p>
+						<p>
+							Below are some noteworthy game development projects I have
+							worked on.
+						</p>
+					</div>
+					<div class="inner">
+						<div class="content-banner">
+							<div class="content-banner-image">
+								<img src="images/repulsor-thumbnail.webp" />
+								<img src="images/repulsor-gameplay.png" />
+								<p class="content-banner-image-caption">
+									Things get crazy in later levels with a high density of
+									dangerous enemies. All enemy types are seen in the above
+									image of level 29 "Cold Fusion".
+								</p>
+								<img src="images/repulsor-cc.png" />
+								<p class="content-banner-image-caption">
+									In response to a request from a beta-tester, a small
+									character customizer was implemented, allowing two-tone
+									color control.
+								</p>
+							</div>
+							<div class="content-banner-text">
+								<h2>Repulsor</h2>
+								<p>
+									For my first publicly released game, <strong>Repulsor</strong>, I challenged myself to build a
+									larger game in a short, focused time period by making use of strong up-front planning and time
+									management. <br />
+									Repulsor is a level-based action game rapidly developed in 10 days.
+								</p>
+								<h3>High-Speed, Iterative Physics Action</h3>
+								<p>
+									Repulsor is composed of thirty, very short and frantic levels where the player can only defeat enemies
+									by pushing them them into hazards, or vice versa, or enemies into enemies!<br /><br />
+
+									Being a game heavily reliant on physics, the design leans into a very frantic style: the player is
+									always moving, enemies are aggressive, and projectiles fly all over the place, and everything dies in
+									one hit. <br /><br />
+
+									While Repulsor is very action-y, the extremely fast pace actually makes many gameplay scenarios too
+									quick to properly react to. This interestingly has the effect of requiring the player to plan out
+									their route to beating a level ahead of time- eventually building up a strategy which can fully tackle
+									the level (However, there is a limited slow-motion slide ability to help line up tricky maneuvers).
+								</p>
+								<h3>Going Bigger</h3>
+								<p>
+									This was my first project which made extensive use of persistent data. Levels needed to track high
+									scores and the number of points earned per level, as the cumulative point count is used for unlocking
+									more levels.<br /><br />
+
+									To store this persistent data, I coded an entire system for serializing level completion data,
+									settings, unlocks, and customization. As an added piece, I also figured out how to make beta save
+									files backwards compatible!
+								</p>
+							</div>
+						</div>
+						<ul class="actions">
+							<li><a href="https://explosiveeggshells.itch.io/repulsor" target="_blank" class="button primary">Check
+									this out on Itch.io</a></li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<section>
+				<div class="content">
+					<div class="inner">
+						<div class="content-banner">
+							<div class="content-banner-image">
+								<img src="images/godot-gridcannon.PNG" />
+								<p class="content-banner-image-caption">
+									Gridcannon uses a 5x5 grid of card decks, where the outer ring is filled with enemies which are killed
+									using decks in the inner rings.<br /> A highlighting feature shows off valid decks for the next card
+									(upper right) to go to.
+								</p>
+							</div>
+							<div class="content-banner-text">
+								<h2>Godot Gridcannon</h2>
+								<p>
+									In learning another engine, Godot (v3.5), I worked on recreating a unique card game designed by game
+									developer Tom Scott, <strong>Gridcannon</strong>. <br /><br />
+
+									Card games can be surprisingly tricky to implement for a few reasons! They require a lot of input
+									validation, complex state machines to match the many game states, and effects / transitions to guide
+									player's attention. Many rules in card games can also be somewhat non-trivial to translate to code.
+								</p>
+								<p>
+									This project also featured a pretty hearty save system which would also double as an undo / buffer
+									system. Saving information about where every card needs to go and the game state to a file was an
+									interesting challenge to implement, as I wanted reloads to occur smoothly during gameplay without
+									creating unnecessarily large files. I eventually managed to save everything in just 624
+									bytes!<br /><br />
+
+									This project is unfinished, though I would like to return to it or re-implement it in Godot v4 one
+									day.
+								</p>
+							</div>
+						</div>
+						<ul class="actions">
+							<li><a href="https://github.com/ExplosiveEggshells/godot-gridcannon" target="_blank"
+									class="button primary"><i class="fab fa-github"></i> Check this out on GitHub</a></li>
+							<br />
+							<li><a
+									href="https://www.pentadact.com/2019-08-20-gridcannon-a-single-player-game-with-regular-playing-cards/"
+									target="_blank" class="button primary"> Tom Scott's <em>Gridcannon</em>
+									Design</a></li>
+						</ul>
+					</div>
+				</div>
+			</section>
+		</section>
+
+		<!-- IGDO -->
+		<section id="igdo" class="wrapper style3 fade-up">
+			<div class="inner">
+				<h2>Independent Game Developers Organization (IGDO)</h2>
+				<p>
+					During my last semester of my masters program, I cofounded my university's game development club! This was an
+					awesome opportunity to build a community of game developers for students to join, share their works in, and
+					have an avenue to learn game development through.<br /><br />
+
+				</p>
+				<div class="content-banner">
+					<div class="content-banner-text-reversed">
+						<p>
+							As the Vice President of the club, I was responsible for community management, creation of club media, and
+							creating and giving presentations on game development concepts. I also helped in planning the club's
+							activities into the Summer and future semesters.<br /><br />
+
+							During this role, I also got a lot of experience managing open-source repositories during the creation of
+							two collaborative projects, setting up project boards and branch protection schemes to ensure members
+							could not accidentally make destructive or unfocused changes.
+						</p>
+					</div>
+					<div class="content-banner-image">
+						<img src="images/gdo-logo.png" />
+					</div>
+				</div>
+				<h2>Game Developer's Library</h2>
+				<p>
+					One of the projects I headed in the IGDO was the website <strong>Game Developer's Library
+						(GDL)</strong>.<br /><br />
+
+					This site serves as a community-contributed source of video game development information. Any IGDO members
+					are given the opportunity to create and add articles, guides, and tutorials about anything related to game
+					dev, adding to our repository of knowledge that we can direct new users to. <br /><br />
+
+					The GDL is ran via GitHub pages and a docs framework called MkDocs, meaning that IGDO members can create
+					articles on the page in a simple markdown format reviewed via GitHub pull requests. This means that the
+					GDL not only serves as a knowledge base, but a low-stress opportunity to learn about open-source workflow-
+					one of my favorite aspects of the project.
+				<p>
+					As part of staging the GDL, I also wrote heaps of articles on it to help out new developers getting into
+					game
+					development- primarily with Unity. I am very excited to see new contributions, and we already have some
+					really interesting articles about Win32 graphics programming from one of our new officers!<br /><br />
+
+					The GDL is a publicly-visible site that anyone can check out! Click the link below to give it a look.
+				</p>
+				<ul class="actions">
+					<li><a href="https://library.niugame.dev" target="_blank" class="button primary"> Visit the GDL</a></li>
+				</ul>
+			</div>
+		</section>
+
+		<section id="computer-graphics" class="wrapper style2 spotlights">
+			<section>
+				<div class="content">
+					<div class="inner">
+						<h1>Computer Graphics</h1>
+						<p>
+							I have a particular passion for Computer Graphics, a CS field which employs tons of incredible tricks to
+							produce combine artistic design and mathematics into awesome effects!<br /><br />
+
+							The projects labeled "RD" are implemented via a recreation of Dr. Duffin's <em>RD_View</em> rendering
+							engine, which itself is heavily based off of Pixar's RenderMan specification. The recreation is created in C++ as
+							part of the rendering course via Dr. Duffin's guidance. You can read more about the RD_View render engine
+							at the link below.
+						</p>
+						<ul class="actions">
+							<li><a href="https://graphics.cs.niu.edu/projects/rd_view/index.html" target="_blank"
+									class="button primary">RD_View Render Engine</a></li>
+						</ul>
+					</div>
+					<div class="inner">
+						<div class="content-banner">
+							<div class="content-banner-image">
+								<img src="images/rd-marching-cubes-3.PNG" />
+								<p class="content-banner-image-caption">
+									A marching cube render of a data set with a single radial focus.
+								</p>
+								<img src="images/rd-marching-cubes-2.PNG" />
+								<p class="content-banner-image-caption">
+									Two radial foci merging together
+								</p>
+								<img src="images/rd-marching-cubes-1.PNG" />
+								<p class="content-banner-image-caption">
+									Three radial foci meeting together.
+								</p>
+							</div>
+							<div class="content-banner-text">
+								<h2>Marching Cubes [RD]</h2>
+								<p>
+									The Marching Cubes algorithm is a technique which generates an isosurface from a 3D field of scalar
+									values. The isosurface created is a surface which straddles between data points in the field which
+									transition across a particular threshold values.<br /><br />
+
+									Marching Cubes was originally developed for and saw much usage in the realm of medical imaging coupled
+									with CT and MRI scans. By obtaining a 3D scalar field of densities within a scanned patient, an
+									isosurface of particular tissue can be rendered by using the known density of the tissue in question.
+									For example, doctors could create a isosurface of the patient's skeletal tissue from the scan to
+									observe abnormalities.
+								</p>
+								<h3>RD_View Implementation</h3>
+								The algorithm itself involves evaluating each data point as a voxel which could potentially contain
+								triangles of the isosurface if it contains a step across threshold value. There are 256 possible
+								isosurface cases within any voxel depending on which edges possess a transition! My RD_View
+								implementation only covers 180 of the 256 cases (which is why there are "holes" missing in parts of the
+								surface), but this is enough to demonstrate the algorithm.
+
+								</p>
+								<h4>Smoothing</h4>
+								<p>
+									In order to increase the smoothness of the created isosurface, trilinear interpolation can be used to
+									ensure that each voxel's transition points are moved to the exact point of threshold-intersection
+									within the data set, rather than at the middle of the voxel edge. This makes the resultant isosurface
+									look less 'cubic'.<br /><br />
+									Furthermore, the gradient at any given isosurface point was calculated via bilinear interpolation
+									across the surface, which can then be applied to the vertex normal to remove jagged edges and create a
+									much smoother appearance.<br /><br />
+
+									Both of these smoothing features can be toggled on and off via command line options, as there may be
+									some cases where smoothing is undesirable or obfuscates the observable data.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section>
+				<div class="content">
+					<div class="inner">
+						<div class="content-banner">
+							<div class="content-banner-image">
+								<img src="images/bezier-flag.gif" />
+								<p class="content-banner-image-caption">
+									This waving flag is implemented via a textured bezier curve, whose control points are modulated by a
+									scrolling sinusoidal function which gets stronger near the end of the flag.<br />
+									Some random noise is also applied to the flag to make it look more natural, which is best seen by
+									watching how the light scrolls along it (and observing the right-most edge of the flag).
+								</p>
+							</div>
+							<div class="content-banner-text">
+								<h2>Bézier Curves [RD]</h2>
+								<p>
+									In graphics, it is often desirable to model curved surfaces which appear remarkably smooth without
+									having to explicitly place create thousands of vertices.<br /><br />
+
+									To achieve this, curves are often expressed as mathematical functions between points which are
+									modulated via control points. This expression is seen in Bézier, NURBS, and B-Splines
+									curves.<br /><br />
+
+									In RD_View, we implement Bézier curves as our curve solution, which allows curves to be rendered and
+									modulated via at least three control points. The De Casteljau algorithm is leveraged to perform
+									interpolation between the series of control points in order to find vertex positions on the 2D
+									curve.<br /><br />
+
+									Further, a 3D <em>Bézier Patch</em> can be created by interpolating between two or more Bézier curves
+									spanning the same direction, creating a very smooth, curved surface.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section>
+				<div class="content">
+					<div class="inner">
+						<h2>Particle Systems: Cannons [RD]</h2>
+						<p>
+							The animation below demonstrates a dynamic particle system demonstration created via the RD_View engine.
+							It presents a scene of cannonballs flying through the air (followed by a motion-trail) and impacting the
+							ground in a dramatic explosion of dirt and debris.<br /><br />
+
+							This particle system requires ticking hundreds of small particle elements with physically based movement
+							updates each frame, and contains a large number of parameters to customize how their speed and momentum
+							should be handled over time. It is worth noting that since RD_View is just a rendering engine, some custom
+							physics tick needed to be implemented to handle object transformation over time. <br /><br />
+
+							One interesting thing to note is that all three of the dirt particle groups use the exact same movement
+							behavior code, but are parameterized differently to create distinct effects.
+						<ul>
+							<li>
+								<strong>Dust cloud (White)</strong>: Particles expands in all directions uniformly, and have a high
+								velocity dampening so they do not travel very far. Each particle is given a very slightly randomized
+								speed to add variance.
+							</li>
+							<li>
+								<strong>Light Debris (Light Brown)</strong>: These particles shoot out in the direction of the
+								cannonball's reflection vector upon impact with the ground. A gaussian distribution is added to said
+								reflection vector (and their speeds) to create some variance in their motion paths. They have strong
+								dampening (not as strong as the cloud), which causes them to suspend in air after the initial burst.
+							</li>
+							<li>
+								<strong>Heavy Debris (Dark Brown)</strong>: These particles are similar to the light debris, but have
+								much greater variance and very little dampening, giving them a heavier, more chaotic motion.
+							</li>
+						</ul>
+						</p>
+						<div class="centered-container">
+							<img class="shadow-image" src="images/rd-cannons-ps.gif">
+						</div>
+						<br />
+						<p>
+							The special care for physics simulation here and fine tuning helps create a realistic and interesting
+							pattern to these impacts, even just using primitive shapes.<br /><br />
+						</p>
+					</div>
+				</div>
+			</section>
+		</section>
+
+		<!-- Contact -->
+		<section id="contact" class="wrapper style1 fade-up">
+			<div class="inner">
+				<h2>Get in Touch</h2>
+				<p>
+					Please do contact me through the following methods for any inquires,
+					job opportunities, or questions about my projects!
+				</p>
+				<div class="split style1">
+					<section>
+						<ul class="contact">
+							<li>
+								<h3>Email</h3>
+								<a href="#">Jakerogers025@gmail.com</a>
+							</li>
+							<li>
+								<h3>Socials</h3>
+								<ul class="icons">
+									<li>
+										<a href="https://github.com/ExplosiveEggshells" class="icon brands fa-github">
+											<span class="label">GitHub</span>
+										</a>
+									</li>
+									<li>
+										<a href="https://www.linkedin.com/in/jake-rogers-chicago-se/" class="icon brands fa-linkedin-in">
+											<span class="label">LinkedIn</span>
+										</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+				</div>
+			</div>
+		</section>
+	</div>
+
+	<!-- Footer -->
+	<footer id="footer" class="wrapper style1-alt">
+		<div class="inner">
+			<ul class="menu">
+				<li>&copy; Jake Rogers. All rights reserved.</li>
+				<li>
+					Design by:
+					<a href="http://html5up.net">HTML5 UP</a>
+				</li>
+				<li>
+					Favicon by:
+					<a href="https://icons8.com/icon/Rko3OlMeiru0/program">Icons8</a>
+				</li>
+			</ul>
+		</div>
+	</footer>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+</body>
+
+</html>
